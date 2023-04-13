@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:insert="fragments/bootstrap::css">
+
+	<title>Mis contactos</title>
+</head>
+<header th:insert="fragments/header::header"></header>
+
+
+<body class="body">
+	<h1 class="titulos">Mis red de contactos</h1>
+	<div class="fondo-lila">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span id="input-icons"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#9b9b9b"
+						class="bi bi-search" viewBox="0 0 16 16">
+						<path
+							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+					</svg></span>
+			</div>
+			<input type="text" class="form-control" placeholder="Buscar persona..." aria-label="buscar"
+				aria-describedby="buscar">
+		</div>
+		<div class="padre-cards">
+			<div class="cards-perfiles">
+				<div class="imagen"><img src="/images/perfil.jpg" alt="imagenes-perfiles" class="imagenes-perfiles"
+						height="100px" width="100px" /> </div>
+				<div class="info-perfil">
+					<h5 id="nombre-contacto">Lorena Casas Montes</h5>
+					<p> Desarrolladora de software</p>
+
+				</div>
+				<div class="imagen">
+					<a th:href="@{/talenting/perfilContacto}"><button type="submit" class="iniciarSesion">Ver perfil</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

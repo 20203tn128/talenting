@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:insert="fragments/bootstrap::css">
+
+	<title>Mi perfil</title>
+</head>
+
+<!-- agregar cerrar sesion y arreglar el boton de pdf, si funciona pero lo exporta raro-->
+
+
+<body class="body">
+<header th:insert="fragments/header::header"></header>
+	<h1 class="titulos">Mi perfil</h1>
+	<div class="fondo-lila" >
+		<div class="portada">
+		
+			<div class="imagen-perfil body-login">
+				<img src="/images/perfil.jpg" alt="imagenes-perfiles" class="imagenes-perfiles contorno" height="200px"
+					width="200px" />
+				<button type="button" class="btn-morado" onclick="pdfgenerate()">Exportar PDF
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-filetype-pdf" style="margin-left: 10px;" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z" />
+					</svg>
+				</button>
+			</div>
+
+		</div>
+		<div class="section-name body-login" id="section-name">
+			<div>
+				<h2 style="color: #F2F2F9;">Lorena Casas Montes</h2>
+				<p class="oficio">Desarrolladora de software</p>
+			</div>
+			<div>
+				<button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#modalEditarNombre">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</button>
+			</div>
+
+		</div>
+		<div class=section-experience id="section-experience">
+			<div class="heading body-login">
+				<h3 style="color: #F2F2F9;">Experiencia</h3>
+				<button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#modalEditExperiencia">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</button>
+			</div>
+			<div class="info-experience">
+				<p class="objetivo">Desarrolladora Front end</p>
+				<p>Microsoft</p>
+				<p>Julio 2022- actualidad</p>
+				<p>Concepción y desarrollo de un sitio web tomando en cuenta la
+					experiencia de usuario y su posicionamiento con el objetivo de
+					aumentar sus visitas y ventas.</p>
+			</div>
+		</div>
+
+		<div class="section-experience">
+
+			<div class="heading body-login">
+				<h3 style="color: #F2F2F9;">Eduación</h3>
+				<button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#modalEditEducation">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</button>
+			</div>
+			<div class="info-experience">
+				<p class="objetivo">Ingenería en tecnologías de la información
+				</p>
+				<p>Universidad del Valle de México</p>
+				<p>Julio 2018- Julio 2022</p>
+				<p>Ingenería en gestión y desarrollo de software</p>
+			</div>
+
+
+		</div>
+
+		<div class=section-experience>
+			<div class="heading body-login">
+				<h3 style="color: #F2F2F9;">Certificaciones</h3>
+				<button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#modalEditCertifications">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</button>
+			</div>
+			<div class="info-experience">
+				<p class="objetivo">Certificación en Oracle cloud computing
+
+				</p>
+				<p>Oracle
+				</p>
+				<p>Julio 2018- Julio 2022</p>
+				<p>Cerifiación de servicios en la nube de Oracle</p>
+			</div>
+		</div>
+
+		<div class="section-experience">
+			<div class="heading body-login">
+				<h3 style="color: #F2F2F9;">Idiomas</h3>
+				<button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#modalEditLanguajes">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</button>
+			</div>
+			<div class="padre-cards">
+				<div class="body-login">
+					<div class="idioma">Ingles</div>
+					<div class="nivel">
+						<p>Avanzado</p>
+						<p>TOEFL</p>
+						<p>Vigencia: Julio 2025</p>
+					</div>
+
+				</div>
+
+				<div class="padre-cards">
+					<div class="idioma">Francés</div>
+					<div class="nivel">
+						<p>Avanzado</p>
+						<p>DELF B2</p>
+						<p>Vigencia: Julio 2025</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="section-experience">
+			<div class="heading body-login">
+				<h3 style="color: #F2F2F9;">Conocimientos y habilidades</h3>
+				<button type="button" class="btn-editar" data-bs-toggle="modal" data-bs-target="#modalEditAbilities">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F2F2F9"
+						class="bi bi-pencil-fill" viewBox="0 0 16 16">
+						<path
+							d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+					</svg>
+				</button>
+			</div>
+			<div class="knowledge-section">
+				<div class="conocimiento">
+					<p class="objetivo">Conocimientos</p>
+					<div class="mini-card">Desarrollo web</div>
+				</div>
+				<div class="conocimiento">
+					<p class="objetivo">Habilidades</p>
+					<div class="mini-card">Trabajo en equipo</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<div th:insert="fragments/modals::modalName"></div>
+	<div th:insert="fragments/modals::modalExperience"></div>
+	<div th:insert="fragments/modals::modalEducation"></div>
+	<div th:insert="fragments/modals::modalCertifications"></div>
+	<div th:insert="fragments/modals::modalLanguajes"></div>
+	<div th:insert="fragments/modals::modalAbilities"></div>
+	
+
+
+
+	
+
+	<div th:insert="fragments/bootstrap::js"></div>
+
+</body>
+
+</html>

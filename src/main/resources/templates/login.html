@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:insert="fragments/bootstrap::css">
+
+	<title> Login</title>
+</head>
+<header></header>
+
+
+<body class="body-login">
+	<div class="izquierdo">
+		<div class="imagen"><img src="/images/logo.png" alt="logo" height="150" width="auto" /></div>
+		<div><img src="/images/login.png" alt="login-image" height="400" width="auto" /></div>
+	</div>
+
+	<div class="derecho">
+		<h1 class="titulo-login">Inicia sesión</h1>
+
+		<form action="" method="post" class="formulario">
+			<p class="text-form">Correo eléctronico o usuario*</p>
+			<div class="input-group mb-3">
+
+				<input type="email" class="form-control" aria-describedby="email" required>
+			</div>
+			<p class="text-form">Contraseña*</p>
+			<div class="input-group mb-3">
+
+				<input type="password" class="form-control" aria-describedby="password" required>
+			</div>
+
+
+		</form>
+		<!--poner al final del div de los botones -->
+
+		<div class="botones-cuenta">
+			<a th:href="@{/talenting/inicioCandidato}"><button type="submit" class="boton">Iniciar
+					sesión</button>
+			</a>
+			<a th:href="@{/talenting/password}" class="a-login">Olvide mi contraseña</a>
+
+		</div>
+		<div class="botones-cuenta">
+			<p class="text-cuenta"> No tienes una cuenta?</p>
+			<a th:href="@{/talenting/crearCuenta}" class="a-login subrayado">Crear una cuenta</a>
+
+		</div>
+
+		<!-- aqui -->
+
+	</div>
+</body>
+
+</html>

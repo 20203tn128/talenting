@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:insert="fragments/bootstrap::css">
+
+	<title>Mis favoritos</title>
+</head>
+
+
+
+<body class="body">
+<header th:replace="fragments/header::header"></header>
+	<h1 class="titulos">Mis favoritos</h1>
+	<div class="fondo-lila">
+		<div th:insert="fragments/vacantes::vacantes-card"></div>
+	</div>
+
+
+
+</body>
+
+</html>

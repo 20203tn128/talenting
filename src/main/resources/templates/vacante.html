@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:insert="fragments/bootstrap::css">
+
+</head>
+
+<body class="body">
+<header th:replace="fragments/header::header"></header>
+
+	<h1 class="titulos">Vacante</h1>
+	<div class="fondo-lila">
+	<!--Cuando entre desde mis favoritos y de la landing page añadir la clase desaparecer"disappear" para que desapareza el seguimiento -->
+		<div th:insert="fragments/following-section::following">
+
+		</div>
+		<div th:insert="fragments/vacante-completa::vacanteCompleta"></div>
+		<div class=" imagen imagen-vacante"><img src="/images/registro.png" alt="vacante" height="300" width="auto" /></div>
+	</div>
+
+
+
+</body>
+
+</html>

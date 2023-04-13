@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:insert="fragments/bootstrap::css">
+
+</head>
+
+<body class="body">
+
+
+	<h1 class="titulos">Inicio Reclutador</h1>
+	<div class="fondo-lila">
+		<div class="flexEnd">
+
+			<button class="boton big alignCenter" type="button" data-bs-toggle="modal"
+				data-bs-target="#modalReclutador">Publicar vacante
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#F2F2F9"
+					class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+					<path
+						d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+				</svg>
+			</button>
+
+		</div>
+
+
+	</div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal" id="modalReclutador">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Publicar nueva Vacante</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+					<form action="" method="" id="form-newJob">
+						<div class="form-group">
+							<label for="vacante">Vacante:</label>
+							<input type="text" class="form-control" id="title-job">
+
+						</div>
+						<div class="form-group">
+							<label for="objetivo">Objetivo:</label>
+							<textarea rows="4" cols="50" class="form-control" name="objective"
+								form="form-newJob"></textarea>
+						</div>
+
+						<div class="row">
+							<div class="col">
+								<label for="endtDate">Estado:</label>
+								<select class="form-select noMargin" aria-label="Default select example" name="state">
+									<option selected>Estado</option>
+									<option value="estado1">Morelos</option>
+
+
+								</select>
+							</div>
+							<div class="col">
+								<label for="startDate">Fecha de Inicio:</label>
+								<input type="date" class="form-control" id="startDate">
+							</div>
+							<div class="col">
+								<label for="modalidad">Modalidad:</label>
+								<input type="date" class="form-control" id="modalidad">
+							</div>
+
+						</div>
+						
+						<div class="row">
+							<div class="col">
+								<label for="endtDate">Tipo:</label>
+								<select class="form-select noMargin" aria-label="Default select example" name="type">
+									<option selected>Tipo</option>
+									<option value="presencial">Presencial</option>
+									<option value="home-office">home office</option>
+									<option value="hibrid">Hibrido</option>
+
+
+								</select>
+							</div>
+							<div class="col">
+								<label for="duration">Duración:</label>
+								<input type="text" class="form-control" id="duration">
+							</div>
+							<div class="col">
+								<label for="salary">Sueldo:</label>
+								<input type="number" class="form-control" id="salary">
+							</div>
+
+						</div>
+
+
+						<div class="form-group">
+							<label for="Beneficios">Beneficios:</label>
+							<input type="text" class="form-control" id="Beneficios">
+						</div>
+						<div class="row">
+						<div class="col">
+						<label for="endDate">Fecha de la  vigencia:</label>
+								<input type="date" class="form-control" id="endDate">
+						</div>
+						</div>
+						
+
+
+
+
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+
+					<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+					<button type="submit" class="boton">Publicar</button>
+				</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<div th:insert="fragments/bootstrap::js"></div>
+</body>
+
+</html>

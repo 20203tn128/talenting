@@ -1,0 +1,397 @@
+<!-- The Modal Name-->
+<div class="modal" id="modalEditarNombre" th:fragment="modalName">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Editar nombre y titulo</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<form action="" method="">
+					<div class="form-group">
+						<label for="name">Nombre:</label>
+						<input type="text" class="form-control" id="name">
+					</div>
+					<div class="form-group">
+						<label for="title1">Titulo:</label>
+						<input type="text" class="form-control" id="tittle">
+					</div>
+
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+
+				<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+				<button type="submit" class="boton">Guardar cambios</button>
+			</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<!-- The Modal Experience-->
+<div class="modal" id="modalEditExperiencia" th:fragment="modalExperience">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Experiencia</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<form action="" method="" id="form-experience">
+					<div class="form-group">
+						<label for="title2">Titulo:</label>
+						<input type="text" class="form-control" id="title-experience">
+
+					</div>
+					<div class="form-group">
+						<label for="Entreprise">Empresa/Organismo:</label>
+						<input type="text" class="form-control" id="Entreprise">
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="startDate">Fecha de inicio:</label>
+							<input type="date" class="form-control" id="startDate">
+						</div>
+						<div class="col">
+							<label for="startDate">Fecha fin:</label>
+							<input type="date" class="form-control" id="endDate">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="description">Descripción:</label>
+						<textarea rows="4" cols="50" class="form-control" name="description"
+							form="form-experience"></textarea>
+					</div>
+					<div id="addform"></div>
+					<div>
+						<button type="button" class="addIcon" onclick="addSection()">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#090F54"
+								class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+								<path
+									d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+							</svg>
+						</button>
+					</div>
+
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+
+				<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+				<button type="submit" class="boton">Guardar cambios</button>
+			</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<!-- The Modal Educacion-->
+<div class="modal" id="modalEditEducation" th:fragment="modalEducation">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Eduación</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<form action="" method="" id="form-education">
+					<div class="form-group">
+						<label for="title2">Titulo:</label>
+						<input type="text" class="form-control" id="title-education">
+
+					</div>
+					<div class="form-group">
+						<label for="University">Universidad:</label>
+						<input type="text" class="form-control" id="university">
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="startDate">Fecha de inicio:</label>
+							<input type="date" class="form-control" id="startDate">
+						</div>
+						<div class="col">
+							<label for="startDate">Fecha fin:</label>
+							<input type="date" class="form-control" id="endDate">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="description">Descripción:</label>
+						<textarea rows="4" cols="50" class="form-control" name="description"
+							form="form-education"></textarea>
+					</div>
+					<div id="addform2"></div>
+					<div>
+						<button type="button" class="addIcon" onclick="addSection2()">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#090F54"
+								class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+								<path
+									d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+							</svg>
+						</button>
+					</div>
+
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+
+				<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+				<button type="submit" class="boton">Guardar cambios</button>
+			</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+
+
+<!-- The Modal Languajes-->
+<div class="modal" id="modalEditLanguajes" th:fragment="modalLanguajes">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Idiomas</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<form action="" method="" id="form-experience">
+					<div class="row">
+						<div class="col">
+							<label for="languaje">Idioma:</label>
+							<input type="text" class="form-control" id="languaje">
+						</div>
+						<div class="col">
+							<label for="nivel">Nivel:</label>
+							<select class="form-select noMargin" aria-label="Default select example" name="nivel">
+								<option selected>Nivel</option>
+								<option value="avanzado">Avanzado</option>
+								<option value="intermedio">Intermedio</option>
+								<option value="medio">Intermedio</option>
+
+							</select>
+						</div>
+
+
+					</div>
+					<div class="form-group">
+						<label for="type">Tipo de certificación:</label>
+						<input type="text" class="form-control" id="type">
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="startDate">Fecha de expedición:</label>
+							<input type="date" class="form-control" id="startDate">
+						</div>
+						<div class="col">
+							<label for="startDate">Fecha de caducidad:</label>
+							<input type="date" class="form-control" id="endDate">
+						</div>
+					</div>
+					<div id="addform3"></div>
+
+					<div class="displayFlex">
+						<button type="button" class="addIcon" onclick="addSection3()">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#090F54"
+								class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+								<path
+									d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+							</svg>
+						</button>
+						
+					</div>
+
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+
+				<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+				<button type="submit" class="boton">Guardar cambios</button>
+			</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<!-- The Modal cetrtifications-->
+
+<div class="modal" id="modalEditCertifications" th:fragment="modalCertifications">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Certificaciones</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<form action="" method="" id="form-certifications">
+					<div class="form-group">
+						<label for="title2">Titulo:</label>
+						<input type="text" class="form-control" id="title-experience">
+
+					</div>
+					<div class="form-group">
+						<label for="Entreprise">Empresa/Organismo:</label>
+						<input type="text" class="form-control" id="Entreprise">
+					</div>
+					<div class="row">
+						<div class="col">
+							<label for="startDate">Fecha de inicio:</label>
+							<input type="date" class="form-control" id="startDate">
+						</div>
+						<div class="col">
+							<label for="startDate">Fecha fin:</label>
+							<input type="date" class="form-control" id="endDate">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="description">Descripción:</label>
+						<textarea rows="4" cols="50" class="form-control" name="description"
+							form="form-certifications"></textarea>
+					</div>
+					<div id="addform4"></div>
+					<div>
+						<button type="button" class="addIcon" onclick="addSection4()">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#090F54"
+								class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+								<path
+									d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+							</svg>
+						</button>
+					</div>
+
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+
+				<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+				<button type="submit" class="boton">Guardar cambios</button>
+			</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- The Modal abilities-->
+<div class="modal" id="modalEditAbilities" th:fragment="modalAbilities">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Conocimientos y Habilidades</h4>
+
+
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<form action="" method="" id="form-knowledge">
+					<p class="objetivo">Conocimientos</p>
+					<div class=" body-login">
+
+						<div>
+
+							<input type="text" class="form-control" id="ability">
+						</div>
+						<div>
+							<button type="submit" class="iniciarSesion">Agregar</button>
+						</div>
+					</div>
+				</form>
+
+
+				<div class="conocimiento">
+
+					<div class="mini-card body-login">Desarrollo web
+						<button type="button" class="btn-badges">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F2F2F9"
+								class="bi bi-x " viewBox="0 0 16 16">
+								<path
+									d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<form action="" method="" id="form-ability">
+					<p class="objetivo">Habilidades</p>
+					<div class=" body-login">
+
+						<div>
+
+							<input type="text" class="form-control" id="ability">
+						</div>
+						<div>
+							<button type="submit" class="iniciarSesion">Agregar</button>
+						</div>
+					</div>
+				</form>
+
+
+				<div class="conocimiento">
+
+					<div class="mini-card body-login"> Trabajo en equipo
+						<button type="button" class="btn-badges">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F2F2F9"
+								class="bi bi-x " viewBox="0 0 16 16">
+								<path
+									d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+
+
+
+
+
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+
+				<button type="button" class="boton-lila" data-bs-dismiss="modal">Cerrar</button>
+				<button type="submit" class="boton">Guardar cambios</button>
+			</div>
+
+
+		</div>
+	</div>
+</div>

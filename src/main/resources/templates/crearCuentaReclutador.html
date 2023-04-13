@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:insert="fragments/bootstrap::css">
+
+	<title> Crear cuenta reclutador</title>
+</head>
+<header></header>
+
+
+<body class="body-login">
+	<div class="izquierdo2">
+		<h1 class="titulo-login"> Registro de cuenta Reclutador</h1>
+		<div th:insert="fragments/submenu::sub-menu">
+
+		</div>
+
+		<form action="" method="post" class="formulario">
+			<div class="row">
+				<div class="col">
+					<label for="name" class="text-form">Nombre(s)*:</label>
+					<input type="text" class="form-control" id="name">
+				</div>
+				<div class="col">
+					<label for="firstName" class="text-form">Apellido Paterno*:</label>
+					<input type="text" class="form-control" id="firstName">
+				</div>
+				<div class="col">
+					<label for="lastName" class="text-form">Apellido Materno:</label>
+					<input type="text" class="form-control" id="lastName">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<label for="genre" class="text-form">Género*:</label>
+					<select class="form-select noMargin" aria-label="Default select example" name="genre" id="genre">
+						<option selected>Género</option>
+						<option value="Femenino">Femenino</option>
+						<option value="Masculino">Masculino</option>
+
+
+					</select>
+				</div>
+				<div class="col">
+					<label for="dateBirth" class="text-form">Fecha de nacimiento*:</label>
+					<input type="date" class="form-control" id="dateBirth">
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<label for="telephone" class="text-form">Teléfono*:</label>
+					<input type="number" class="form-control" id="telephone">
+				</div>
+				<div class="col">
+					<label for="mail" class="text-form">Correo eléctronico*:</label>
+					<input type="email" class="form-control" id="email">
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<label for="user" class="text-form">Usuario*:</label>
+					<input type="text" class="form-control" id="user">
+				</div>
+				<div class="col">
+					<label for="password" class="text-form">Contraseña*:</label>
+					<input type="password" class="form-control" id="password">
+				</div>
+				<div class="col">
+					<label for="state" class="text-form">Estado*:</label>
+					<select class="form-select noMargin" aria-label="Default select example" name="state" id="state">
+						<option selected>Estado</option>
+						<option value="Morelos">Morelos</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label for="mail" class="text-form">Confirmación de correo*:</label>
+					<input type="email" class="form-control" id="email">
+					<label for="password" class="text-form">Confirmación de contraseña*:</label>
+					<input type="password" class="form-control" id="password">
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col">
+					<label for="job" class="text-form">Puesto*:</label>
+					<input type="text" class="form-control" id="job">
+				</div>
+				<div class="col">
+					<label for="entreprise" class="text-form">Empresa*:</label>
+					<input type="text" class="form-control" id="entreprise">
+				</div>
+
+			</div>
+		</form>
+		<!--cambiarlo 	abajo de los div -->
+
+		<div class="botones-cuenta">
+			<a th:href=@{/talenting/login}><button type="submit" class="boton-lila">Atras</button>
+			</a>
+			<a th:href="@{/talenting/inicioReclutador}"><button type="submit" class="boton" style="margin-left: 2rem;">Crear cuenta
+				</button>
+			</a>
+
+
+		</div>
+
+
+	</div>
+
+	<div class="derecho2">
+		<div class="imagen"><img src="/images/logo.png" alt="logo" height="150" width="auto" /></div>
+		<div class="image-count"><img src="/images/reclutador.png" alt="login-image" height="480" width="auto" /></div>
+
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:insert="fragments/bootstrap::css">
+
+	<title> Crear cuenta</title>
+</head>
+<header></header>
+
+
+<body class="body-login">
+	<div class="izquierdo2">
+		<h1 class="titulo-login"> Registro de cuenta</h1>
+		<div th:insert="fragments/submenu::sub-menu">
+
+		</div>
+
+		<form action="" method="post" class="formulario" id="formCandidato">
+
+			<div style="text-align:center;margin-top:20px;margin-bottom:50px">
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+
+			</div>
+			<div>
+
+				<div class="col2">
+					<div>
+						<h2 class="subtitulo">Datos Básicos</h2>
+					</div>
+					<div class="body-login">
+						<div class="tercia">
+							<label for="name" class="text-form">Nombre(s)*:</label>
+							<input type="text" class="form-control" id="name">
+						</div>
+						<div class="tercia">
+							<label for="firstName" class="text-form">Apellido Paterno*:</label>
+							<input type="text" class="form-control" id="firstName">
+						</div>
+						<div class="tercia">
+							<label for="lastName" class="text-form">Apellido Materno:</label>
+							<input type="text" class="form-control" id="lastName">
+						</div>
+					</div>
+
+					<div class="body-login">
+						<div class="mitad">
+							<label for="genre" class="text-form">Género*:</label>
+							<select class="form-select noMargin" aria-label="Default select example" name="genre"
+								id="genre">
+								<option selected>Género</option>
+								<option value="Femenino">Femenino</option>
+								<option value="Masculino">Masculino</option>
+
+							</select>
+						</div>
+						<div class="mitad">
+							<label for="dateBirth" class="text-form">Fecha de nacimiento*:</label>
+							<input type="date" class="form-control" id="dateBirth">
+						</div>
+
+					</div>
+
+					<div class="body-login">
+						<div class="mitad">
+							<label for="telephone" class="text-form">Teléfono*:</label>
+							<input type="number" class="form-control" id="telephone">
+						</div>
+						<div class="mitad">
+							<label for="mail" class="text-form">Correo eléctronico*:</label>
+							<input type="email" class="form-control" id="email">
+
+						</div>
+
+					</div>
+					<div class="body-login">
+						<div class="tercia">
+							<label for="user" class="text-form">Usuario*:</label>
+							<input type="text" class="form-control" id="user">
+						</div>
+						<div class="tercia">
+							<label for="password" class="text-form">Contraseña*:</label>
+							<input type="password" class="form-control" id="password">
+
+						</div>
+						<div class="tercia">
+							<label for="state" class="text-form">Estado*:</label>
+							<select class="form-select noMargin" aria-label="Default select example" name="state"
+								id="state">
+								<option selected>Estado</option>
+								<option value="Morelos">Morelos</option>
+
+							</select>
+
+						</div>
+					</div>
+
+					<div class="body-login">
+						<div class="mitad">
+							<label for="mail" class="text-form">Confirmación de correo*:</label>
+							<input type="email" class="form-control" id="email">
+						</div>
+						<div class="mitad">
+							<label for="password" class="text-form">Confirmación de contraseña*:</label>
+							<input type="password" class="form-control" id="password">
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="col2">
+					<div>
+						<h2 class="subtitulo">Datos Profesionales</h2>
+					</div>
+
+					<label for="title" class="text-form">Titulo breve*:</label>
+					<input type="text" class="form-control" id="title">
+
+
+
+
+					<label for="description" class="text-form">Descripción general:</label>
+					<textarea rows="4" cols="50" class="form-control" name="description"
+						form="formCandidato"></textarea>
+
+
+
+					<h4 style="color:#F2F2F9;margin-top:20px; margin-bottom:20px">Experiencia laboral</h4>
+
+					<div class="body-login">
+
+						<div class="tercia">
+							<label for="job" class="text-form">Puesto*:</label>
+							<input type="text" class="form-control" id="job">
+						</div>
+						<div class="tercia">
+							<label for="startDate" class="text-form">Fecha inicio:</label>
+							<input type="date" class="form-control" id="startDate">
+
+						</div>
+						<div class="tercia">
+							<label for="endDate" class="text-form">Fecha fin :</label>
+							<input type="date" class="form-control" id="endDate">
+
+						</div>
+
+					</div>
+
+					<label for="activities" class="text-form">Actividades:</label>
+					<input type="text" class="form-control" id="activities">
+					<!--boton -->
+
+					<h4 style="color:#F2F2F9;margin-top:20px; margin-bottom:20px">Estudios</h4>
+
+					<label for="university" class="text-form">Universidad*:</label>
+					<input type="text" class="form-control" id="university">
+
+
+
+					<div class="body-login">
+						<div class="mitad">
+							<label for="carrera" class="text-form">Carrera*:</label>
+							<input type="text" class="form-control" id="carrera">
+						</div>
+						<div class="mitad">
+							<label for="grade" class="text-form">Grado académico*:</label>
+							<input type="text" class="form-control" id="grade">
+
+						</div>
+
+					</div>
+					<div class="body-login">
+						<div class="tercia">
+							<label for="startDate" class="text-form">Fecha de inicio*:</label>
+							<input type="date" class="form-control" id="startDate">
+						</div>
+						<div class="tercia">
+							<label for="endDate" class="text-form">Fecha fin*:</label>
+							<input type="date" class="form-control" id="endDate">
+
+						</div>
+						<div class="tercia">
+							<!-- boton add-->
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col2">
+					<div>
+						<h2 class="subtitulo">Habilidades y certificaciones</h2>
+					</div>
+					<div class="body-login">
+						<div class="mitad">
+							<label for="languajes" class="text-form">Idiomas*:</label>
+							<input type="text" class="form-control" id="languajes">
+						</div>
+						<div class="mitad">
+							<label for="grade" class="text-form">Nivel*:</label>
+							<select class="form-select noMargin" aria-label="Default select example" name="grade"
+								id="grade">
+								<option selected>Nivel</option>
+								<option value="nativo">Nativo</option>
+								<option value="intermedio">Intermedio</option>
+								<option value="principiante">Principiante</option>
+
+							</select>
+
+						</div>
+
+					</div>
+					<div>
+						<!-- boton-->
+					</div>
+
+					<h4 style="color:#F2F2F9;margin-top:20px; margin-bottom:20px">Certificaciones</h4>
+					<label for="tittle" class="text-form">Title*:</label>
+					<input type="text" class="form-control" id="title">
+
+					<div class="body-login">
+
+						<div class="tercia">
+							<label for="entreprise" class="text-form">Empresa/Organismo*:</label>
+							<input type="text" class="form-control" id="entreprise">
+						</div>
+						<div class="tercia">
+							<label for="startDate" class="text-form">Fecha de obtención:</label>
+							<input type="date" class="form-control" id="startDate">
+
+						</div>
+						<div class="tercia">
+							<label for="endDate" class="text-form">Fecha de caducidad :</label>
+							<input type="date" class="form-control" id="endDate">
+
+						</div>
+
+					</div>
+
+					<!--boton -->
+					<h4 style="color:#F2F2F9;margin-top:20px; margin-bottom:20px">Cursos realizados</h4>
+					<label for="tittle" class="text-form">Nombre del curso*:</label>
+					<input type="text" class="form-control" id="title">
+					<div class="body-login">
+						<div class="mitad">
+							<label for="institucion" class="text-form">Institucion*:</label>
+							<input type="text" class="form-control" id="institution">
+						</div>
+						<div class="mitad">
+							<label for="grade" class="text-form">Número de Horas*:</label>
+							<input type="number" class="form-control" id="hour">
+							
+
+						</div>
+
+					</div>
+					<div class="body-login">
+
+						
+						<div class="tercia">
+							<label for="startDate" class="text-form">Fecha de inicio:</label>
+							<input type="date" class="form-control" id="startDate">
+
+						</div>
+						<div class="tercia">
+							<label for="endDate" class="text-form">Fecha de fin :</label>
+							<input type="date" class="form-control" id="endDate">
+
+						</div>
+						<div class="tercia">
+						<!-- boton-->	
+						</div>
+
+					</div>
+					<h4 style="color:#F2F2F9;margin-top:20px; margin-bottom:20px">Conocimientos y Habilidades</h4>
+					<label for="conocimientos" class="text-form">Conocimientos:</label>
+					<input type="text" class="form-control" id="conocimientos">
+					<div><!-- boton--></div>
+					<label for="habilidades" class="text-form">Habilidades:</label>
+					<input type="text" class="form-control" id="abilities">
+					<div><!-- boton--></div>
+					
+					
+
+
+
+				</div>
+
+
+
+
+			</div>
+			<div class="botones-cuenta">
+				<button type="button" id="prevBtn" onclick="nextPrev(-1)" class="boton-lila">Anterior</button>
+				<button type="button" id="nextBtn" onclick="nextPrev(1)" class="boton"
+					style="margin-left: 2rem;">Siguiente</button>
+			</div>
+
+
+
+
+		</form>
+
+
+
+
+	</div>
+
+	<div class="derecho2">
+		<div class="imagen"><img src="/images/logo.png" alt="logo" height="150" width="auto" /></div>
+		<div class="image-count"><img src="/images/candidato.png" alt="login-image" height="480" width="auto" /></div>
+		<div th:insert="fragments/bootstrap::js"></div>
+
+	</div>
+</body>
+
+</html>
